@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="1.444" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Select Query Execution" name="Deposits tablosunda amount degerine gore id sorgulama testi." time="1.201">
+<testsuite name="Cucumber" time="3.046" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Select Query Execution" name="email adresinden kullanici ismi sorgulama testi." time="2.508">
 <system-out><![CDATA[
 * Database connection kurar.................................................passed
-Given Query01 hazirlar......................................................passed
-When Query01 sonuclarini isler..............................................passed
-And Database baglantisini kapatir...........................................passed
+Given Database connection kurar.............................................passed
+When Query03 hazirlar.......................................................passed
+Then Query03 sonuclarini isler..............................................passed
+And Database connection kapatir.............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
