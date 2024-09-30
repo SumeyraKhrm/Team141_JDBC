@@ -6,7 +6,7 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -23,16 +23,20 @@ select * from users where country_code = 'TR';
 
 SELECT name FROM cron_schedules limit 2;
 
-select * from users where email = 'test@gmail.com';]]></console>
+select * from users where email = 'test@gmail.com';
+
+select * from users;
+
+update users set mobile = 05763452555 where username like '%r_';
+
+select * from users;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="121a423c-38e3-4a23-9c5e-20ed4081dd5f" object-ref="consoles/Team141" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="121a423c-38e3-4a23-9c5e-20ed4081dd5f" />

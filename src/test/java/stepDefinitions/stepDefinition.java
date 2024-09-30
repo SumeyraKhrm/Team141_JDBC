@@ -25,6 +25,8 @@ public class stepDefinition {
     String Query;
     QueryManage queryManage = new QueryManage();
 
+    int intResult;
+
     @Given("Database connection kurar")
     public void database_connection_kurar() throws SQLException {
        connection =DriverManager.getConnection(ConfigReader.getProperty("URL"),
@@ -36,7 +38,7 @@ public class stepDefinition {
         // "amount" değeri 100$ ile 500$ arasında olan user_id’leri doğrulayınız
 
         String Query = "SELECT user_id FROM u201212290_loantec.deposits WHERE amount BETWEEN 100 AND 500";
-        //tek satır halinde
+        //tek satır halinde yazılmalı
 
         statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         resultSet =  statement.executeQuery(Query);
@@ -131,6 +133,25 @@ public class stepDefinition {
     @Then("Database connection kapatir.")
     public void database_connection_kapatir() {
         JDBCReusableMethods.closeConnection();
+
+    }
+
+    //   *************************  UPDATE QUERY ****************************
+
+    //UpdateQuery01
+
+    @Given("UpdateQuery01 hazirlanir ve calistirilir.")
+    public void update_query01_hazirlanir_ve_calistirilir() {
+
+       Query = queryManage.getUpdateQuery01();
+
+       intResult = JDBCReusableMethods.updateQuery(Query);
+
+    }
+    @Given("UpdateQuery01 sonuclari islenir.")
+    public void update_query01_sonuclari_islenir() {
+
+        assertEquals(1,intResult);
 
     }
 

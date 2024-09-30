@@ -8,6 +8,12 @@ public class QueryManage {
 
     // private ı kullanabilmek için başka bir class da getter olusturuyoruz.
 
+    private String updateQuery01="update users set mobile = 05763452555 where username like '%r_'";
+
+
+
+
+
 
     //******Getter***********
 
@@ -20,6 +26,10 @@ public class QueryManage {
         return query03;
     }
 
+
+    public String getUpdateQuery01() {
+        return updateQuery01;
+    }
 
 
 }
