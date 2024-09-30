@@ -29,7 +29,28 @@ select * from users;
 
 update users set mobile = 05763452555 where username like '%r_';
 
-select * from users;]]></console>
+select * from users;
+
+update users set mobile = ? where username like ?
+
+select * from admin_notifications;
+
+update admin_notifications set is_read=1 where id=3 ;
+
+select * from admin_password_resets;
+
+insert into admin_password_resets (id, email,token, status, created_at) values (2210,'info@loantechexper.com','234267',1,'2024-02-10-00:00:00');
+
+select * from admin_password_resets where id=2211;
+
+select * from device_tokens;
+
+insert into device_tokens (id, user_id, is_app, token, created_at, updated_at ) values (1, 0,5,'token141','2024-02-10-00:00:00','2024-02-10-00:00:00');
+
+
+select * from extensions;
+
+delete from extensions where id =5;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
